@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    outline: none;
+    transition: all 200ms;
+    text-transform: capitalize;
+}
+
+:root {
+    --bg: #EBF0F7;
+    --task-bg: #FFFFFF;
+}
+
+.changeColor {
+    background-color: black;
+}
+
+body {
+    background: var(--bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.todoListbox {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.todoListbox h2 {
+    font-size: 33px;
+    text-transform: uppercase;
+}
+
+.todoListbox input {
+    background-color: var(--task-bg);
+    padding: 10px;
+    border: 1px solid #000;
+    outline: none;
+    margin: 10px 0;
+    width: 400px;
+}
+
+.addBtn {
+    background: rgb(47, 255, 47);
+    padding: 5px 30px;
+    border-color: transparent;
+    cursor: pointer;
+
+}
+
+.addBtn:hover {
+    transform: scale(1.1);
+}
+
+.tasksbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    background: var(--task-bg);
+    width: 200px;
+    margin: 20px;
+    height: 200px;
+    overflow-x: auto;
+    position: relative;
+}
+
+section h3 {
+    display: block;
+    padding: 10px;
+    background: #ccc;
+    position: sticky;
+    top: 0;
+}
+
+section p {
+    padding: 10px;
+}
+
+.date {
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+}
