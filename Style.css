@@ -12,10 +12,33 @@
 :root {
     --bg: #EBF0F7;
     --task-bg: #FFFFFF;
+    --black: #0000;
+    --white: #ffff;
+    --color-: linear-gradient(90deg, #2AE9DAff, #86F363ff);
+    /* CSS HEX */
+    --turquoise: #2AE9DAff;
+    --screamin-green: #86F363ff;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(90deg, #2AE9DAff, #86F363ff);
+    padding: 10px 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .changeColor {
     background-color: black;
+}
+
+.changeColor .todoListbox h2 {
+    color: var(--white);
 }
 
 body {
@@ -32,10 +55,6 @@ body {
     padding: 20px 0;
 }
 
-.todoListbox h2 {
-    font-size: 33px;
-    text-transform: uppercase;
-}
 
 .todoListbox input {
     background-color: var(--task-bg);
