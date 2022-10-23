@@ -11,7 +11,11 @@ form.addEventListener("submit", (eo) => {
   const task = `<section>
   <h3>${inputTitle.value}</h3>
   <p>${inputtask.value}</p>
-  <p class="date">${datum}</p>
+  <div class="tools">
+  <i class="fa-sharp fa-solid fa-trash"></i>
+  <i class="fa-solid fa-star"></i>
+  <i class="fa-solid fa-share"></i>
+</div>
   </section>`;
   tasksbox.innerHTML += task;
   eo.preventDefault();
