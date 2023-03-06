@@ -4,7 +4,7 @@ const form = document.querySelector("form");
 const tasksbox = document.getElementById("tasksbox");
 const tools = document.getElementById("tools");
 
-// colro Change
+// color Change
 const changeColor = document
   .getElementById("changeColor")
   .addEventListener("click", (params) => {
