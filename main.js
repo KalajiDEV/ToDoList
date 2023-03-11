@@ -34,6 +34,6 @@ tasksbox.addEventListener("click", (eo) => {
   if (eo.target.className == "fa-sharp fa-solid fa-trash") {
     eo.target.parentElement.parentElement.remove();
   } else if (eo.target.className == "fa-solid fa-star") {
-    eo.target.parentElement.parentElement.style.background = "yellow";
+    eo.target.parentElement.parentElement.style.background = "#fbd975";
   }
 });

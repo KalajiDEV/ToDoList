@@ -1,150 +1,183 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    text-decoration: none;
-    outline: none;
-    transition: all 300ms;
-    text-transform: capitalize;
-}
-
-:root {
-    --bg: #EBF0F7;
-    --task-bg: #FFFFFF;
-    --black: #0000;
-    --white: #ffff;
-    --color-: linear-gradient(90deg, #2AE9DAff, #86F363ff);
-    /* CSS HEX */
-    --turquoise: #2AE9DAff;
-    --screamin-green: #86F363ff;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  outline: none;
+  transition: all 300ms;
+  text-transform: capitalize;
 }
 
 .container {
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-}
-
-nav {
-    width: 100%;
-    height: 60px;
-    background: linear-gradient(90deg, #2AE9DAff, #86F363ff);
-    padding: 10px 0;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-header h2 {
-    display: block;
-    text-transform: uppercase;
-    font-size: 33px;
-}
-
-header i {
-    cursor: pointer;
-}
-
-.changeColor {
-    background-color: black;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
 }
 
 body {
-    background: var(--bg);
+  min-height: 100vh;
+  background: #222;
+}
+/* dark mode */
+.changeColor {
+  background-color: #fff;
+}
+
+.changeColor header i {
+  color: #222;
+}
+
+.changeColor nav {
+  background: #005eff;
+}
+
+.changeColor header h2 {
+  color: #fff;
+}
+
+.changeColor section p {
+  padding: 10px;
+  color: #222;
+}
+
+.changeColor section h3 {
+  background: #005eff;
+  color: #fff;
+}
+.changeColor section {
+  background: #ffffff;
+  border: #005eff 2px solid;
+}
+
+.changeColor ::placeholder,
+.changeColor .todoListbox input {
+  color: #222;
+}
+nav {
+  width: 100%;
+  height: 60px;
+  padding: 10px 0;
+  background: #454545;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header h2 {
+  display: block;
+  text-transform: uppercase;
+  font-size: 33px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+header i {
+  cursor: pointer;
+  font-size: 22px;
+  color: #fff;
 }
 
 .todoListbox {
-    text-align: center;
-    padding: 20px 0;
+  text-align: center;
+  padding: 30px 0;
 }
 
 .todoListbox input {
-    background-color: var(--task-bg);
-    padding: 10px;
-    border: 1px solid #000;
-    outline: none;
-    margin: 10px 0;
-    width: 400px;
+  /* background-color: var(--task-bg); */
+  background: none;
+  border: 3px solid #005eff;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  margin: 10px 0;
+  width: 400px;
+  color: #fff;
+}
+
+::placeholder {
+  color: #ccc;
+  letter-spacing: 1px;
 }
 
 .addBtn {
-    background: linear-gradient(90deg, #2AE9DAff, #86F363ff);
-    padding: 5px 30px;
-    border-color: transparent;
-    cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  padding: 5px 60px;
+  border-color: transparent;
+  cursor: pointer;
+  background: #005eff;
+  color: #fff;
+  border: 2px solid transparent;
 }
 
 .addBtn:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
+  background: none;
+  border-color: #005eff;
+  box-shadow: inset 0 0 10px #005eff;
 }
 
 .tasksbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 section {
-    background: var(--bg);
-    width: 600px;
-    margin: 10px;
-    min-height: 70px;
-    overflow-x: auto;
-    position: relative;
+  background: #005eff;
+  width: 50%;
+  margin: 10px;
+  min-height: 90px;
+  position: relative;
+  overflow: hidden;
 }
 
 section h3 {
-    display: block;
-    padding: 10px;
-    background: linear-gradient(90deg, #2AE9DAff, #86F363ff);
-    position: sticky;
-    top: 0;
+  display: block;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  background: #fff;
 }
 
 section p {
-    padding: 10px;
+  padding: 10px;
+  color: #fff;
+  max-width: 100%;
 }
 
 section .tools {
-    position: absolute;
-    bottom: 2px;
-    right: 2px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
 
 section .tools i {
-    padding: 0 3px;
-    color: rgb(77, 77, 77);
-    cursor: pointer;
-}
-
-section .tools i:hover {
-    color: #000;
+  padding: 0 3px;
+  color: goldenrod;
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {
-
-    section {
-        width: 600px;
-        min-height: 70px;
-    }
+  section {
+    width: 600px;
+    min-height: 70px;
+  }
 }
 
-
 @media (max-width: 600px) {
+  section {
+    width: 300px;
+    min-height: 70px;
+  }
 
-
-    section {
-        width: 300px;
-        min-height: 70px;
-    }
-
-    .todoListbox input {
-        width: 300px;
-    }
-
+  .todoListbox input {
+    width: 300px;
+  }
 }
